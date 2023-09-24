@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7384490185484090046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d421e29343c77349bcbe4ad66471ec7, type: 3}
+  m_Name: TriggerRootNode
+  m_EditorClassIdentifier: 
+  CachedGraphPosition: {x: 174, y: 119}
+  description: 'On Your Combat Phase:'
+  GUID: 27d63182-5407-475e-a53a-e0f0506c2cab
+  parent: {fileID: 0}
+  child: {fileID: -4416401605024795051}
+  MustMeetAllFlags: 0
+  PlayerFlags: 1
+  SourceFlags: 16
+  trigger: 4
+  TriggerOnce: 0
+--- !u!114 &-6623494809086431492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c457a41fe1ad5cb4dbb163e982e94f72, type: 3}
+  m_Name: SummonNode
+  m_EditorClassIdentifier: 
+  CachedGraphPosition: {x: 2.0000076, y: 466.24}
+  description: Summon a 2/1 Brute with Double Strike.
+  GUID: 795ae828-3302-4741-a3cc-e71384522e4d
+  parent: {fileID: 4418571248350671628}
+  args:
+    source:
+      DisplayName: TriggerSource
+      useCallback: 0
+      value: {fileID: 0}
+    amount:
+      DisplayName: TriggerAmount
+      useCallback: 0
+      value: 1
+    targets:
+      DisplayName: TriggerTargets
+      useCallback: 0
+  LegalTargets: 0
+  mustMeetAllFlags: 0
+  numberOfTargets: 1
+  targetCallbackType: 0
+  cardToSummon: {fileID: 11400000, guid: 46f895c72f4d30240bcf09e499def1b5, type: 2}
+--- !u!114 &-4416401605024795051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd4ad43239a1ab14b8aaa86016ceabfb, type: 3}
+  m_Name: CardEffectSelectorNode
+  m_EditorClassIdentifier: 
+  CachedGraphPosition: {x: 158, y: 238.15999}
+  description: Runs left to right until a child succeeds
+  GUID: b53644b6-5af6-4449-9c40-72ade12380d9
+  parent: {fileID: -7384490185484090046}
+  Children:
+  - {fileID: 4418571248350671628}
+  - {fileID: 3173392356173332585}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c662145bc9a0c314a8f409c53f96df7c, type: 3}
+  m_Name: SummonerDefaultEffectTree
+  m_EditorClassIdentifier: 
+--- !u!114 &3173392356173332585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c457a41fe1ad5cb4dbb163e982e94f72, type: 3}
+  m_Name: SummonNode
+  m_EditorClassIdentifier: 
+  CachedGraphPosition: {x: 248.5, y: 355}
+  description: 
+  GUID: f20abc80-3250-4c94-a66d-a60b05288f48
+  parent: {fileID: -4416401605024795051}
+  args:
+    source:
+      DisplayName: TriggerSource
+      useCallback: 0
+      value: {fileID: 0}
+    amount:
+      DisplayName: TriggerAmount
+      useCallback: 0
+      value: 1
+    targets:
+      DisplayName: TriggerTargets
+      useCallback: 0
+  LegalTargets: 0
+  mustMeetAllFlags: 0
+  numberOfTargets: 1
+  targetCallbackType: 0
+  cardToSummon: {fileID: 11400000, guid: 53b10b6814e167949bfbf6cde98efb7d, type: 2}
+--- !u!114 &4418571248350671628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d49651b25ed384344a2f5368d556447c, type: 3}
+  m_Name: CardEffectChanceNode
+  m_EditorClassIdentifier: 
+  CachedGraphPosition: {x: 53, y: 355}
+  description: 50% Chance to execute
+  GUID: f0c875f8-5d33-4a39-851d-6fb0f621edf4
+  parent: {fileID: -4416401605024795051}
+  Child: {fileID: -6623494809086431492}
+  successChance: 50

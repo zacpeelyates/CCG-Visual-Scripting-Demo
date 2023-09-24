@@ -70,3 +70,13 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Library and Artifact files
+Library/
+Temp/
+UserSettings/
+Logs/
+Debug/
+Card-Pipeline/.vsconfig
+Card-Pipeline/.vscode/settings.json
+

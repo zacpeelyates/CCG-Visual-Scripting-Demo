@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a0b750649358cb4badcf5fe48bc1526, type: 3}
+  m_Name: testdeck
+  m_EditorClassIdentifier: 
+  serializedDeckDictionary:
+    keyCollision: 0
+    list:
+    - Key: {fileID: 11400000, guid: 2062b9942348b2c42af483980bdcd803, type: 2}
+      Value: 4
+    - Key: {fileID: 11400000, guid: fcd638572c7701744a0094aa6be879eb, type: 2}
+      Value: 4
+    - Key: {fileID: 11400000, guid: 680bdade758e9054a86e72cd9a13a1a4, type: 2}
+      Value: 4

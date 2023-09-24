@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-826122244042434595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d421e29343c77349bcbe4ad66471ec7, type: 3}
+  m_Name: TriggerRootNode
+  m_EditorClassIdentifier: 
+  GUID: 864d4d6b-223f-409f-952b-5fcfd4c256fb
+  description: 'On Either turn, When This DealDamage:'
+  parent: {fileID: 0}
+  CachedGraphPosition: {x: 489.6, y: 183.6}
+  child: {fileID: -819066371432414903}
+  trigger: 21
+  TriggerOnce: 0
+  SourceFlags: 16
+  PlayerFlags: 6
+  MustMeetAllFlags: 0
+--- !u!114 &-819066371432414903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 574537971fd534d4a8457864bd5d716c, type: 3}
+  m_Name: DestroyNode
+  m_EditorClassIdentifier: 
+  GUID: 9c32ef00-461d-4cfc-bf79-cf7db9e3cf67
+  description: 
+  parent: {fileID: -826122244042434595}
+  CachedGraphPosition: {x: 516.8, y: 295.6}
+  args:
+    source:
+      DisplayName: TriggerSource
+      useCallback: 1
+      value: {fileID: 0}
+    amount:
+      DisplayName: TriggerAmount
+      useCallback: 0
+      value: 1
+    targets:
+      DisplayName: TriggerTargets
+      useCallback: 1
+  targetCallbackType: 0
+  numberOfTargets: 1
+  LegalTargets: 0
+  mustMeetAllFlags: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0a99cb662242164e8f42a207c369402, type: 3}
+  m_Name: Deathtouch
+  m_EditorClassIdentifier: 

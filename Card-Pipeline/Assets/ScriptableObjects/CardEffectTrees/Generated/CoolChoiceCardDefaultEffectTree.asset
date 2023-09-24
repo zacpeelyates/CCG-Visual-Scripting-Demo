@@ -1,0 +1,153 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7909986040947051315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c457a41fe1ad5cb4dbb163e982e94f72, type: 3}
+  m_Name: SummonNode
+  m_EditorClassIdentifier: 
+  CachedGraphPosition: {x: 233, y: 356}
+  description: Summon 2 1/2 Undeads with Deathtouch.
+  GUID: cbe128f7-fc30-4362-8823-43fa8e0b4c2e
+  parent: {fileID: 8307923728762889201}
+  args:
+    source:
+      DisplayName: TriggerSource
+      useCallback: 0
+      value: {fileID: 0}
+    amount:
+      DisplayName: TriggerAmount
+      useCallback: 0
+      value: 2
+    targets:
+      DisplayName: TriggerTargets
+      useCallback: 0
+  LegalTargets: 0
+  mustMeetAllFlags: 0
+  numberOfTargets: 0
+  targetCallbackType: 0
+  cardToSummon: {fileID: 11400000, guid: dc59e7133995c16428e9a108d62b4fd4, type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c662145bc9a0c314a8f409c53f96df7c, type: 3}
+  m_Name: CoolChoiceCardDefaultEffectTree
+  m_EditorClassIdentifier: 
+--- !u!114 &6016115399392454232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d421e29343c77349bcbe4ad66471ec7, type: 3}
+  m_Name: TriggerRootNode
+  m_EditorClassIdentifier: 
+  CachedGraphPosition: {x: 158, y: 125}
+  description: 'On Your turn, When This Enters:'
+  GUID: cf903324-270f-4204-ad5f-7fff439d99d8
+  parent: {fileID: 0}
+  child: {fileID: 8307923728762889201}
+  MustMeetAllFlags: 0
+  PlayerFlags: 1
+  SourceFlags: 16
+  trigger: 26
+  TriggerOnce: 0
+--- !u!114 &6512308031569335898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce3faab33581e5546b351dba3b5e1415, type: 3}
+  m_Name: DamageNode
+  m_EditorClassIdentifier: 
+  CachedGraphPosition: {x: 39.68, y: 355.68}
+  description: Deal 3 damage to a Enemy Creature.
+  GUID: 3aea076e-c767-41b3-b404-358655b028f1
+  parent: {fileID: 8307923728762889201}
+  args:
+    source:
+      DisplayName: TriggerSource
+      useCallback: 0
+      value: {fileID: 0}
+    amount:
+      DisplayName: TriggerAmount
+      useCallback: 0
+      value: 3
+    targets:
+      DisplayName: TriggerTargets
+      useCallback: 0
+  LegalTargets: 6
+  mustMeetAllFlags: 1
+  numberOfTargets: 1
+  targetCallbackType: 0
+--- !u!114 &8283339931036631055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: DrawCardNode
+  m_EditorClassIdentifier: Assembly-CSharp::DrawCardNode
+  CachedGraphPosition: {x: 443, y: 356}
+  description: a Ally Player Draws 1 cards.
+  GUID: b0b85a4f-2f9c-4158-bd9e-9c34a8be5637
+  parent: {fileID: 8307923728762889201}
+  args:
+    source:
+      DisplayName: TriggerSource
+      useCallback: 0
+      value: {fileID: 0}
+    amount:
+      DisplayName: TriggerAmount
+      useCallback: 0
+      value: 1
+    targets:
+      DisplayName: TriggerTargets
+      useCallback: 0
+  LegalTargets: 9
+  mustMeetAllFlags: 1
+  numberOfTargets: 1
+  targetCallbackType: 0
+--- !u!114 &8307923728762889201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd77895919c2ba543a7794b7cd6b9fa2, type: 3}
+  m_Name: CardEffectChoiceNode
+  m_EditorClassIdentifier: 
+  CachedGraphPosition: {x: 158, y: 241}
+  description: 
+  GUID: 9de399d7-965d-48a4-9d49-0d9a348990a8
+  parent: {fileID: 6016115399392454232}
+  Children:
+  - {fileID: 6512308031569335898}
+  - {fileID: -7909986040947051315}
+  - {fileID: 8283339931036631055}

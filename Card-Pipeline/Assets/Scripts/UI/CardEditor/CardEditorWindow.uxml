@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Scripts/UI/CardEditor/CardEditorWindow.uss?fileID=7433441132597879392&amp;guid=ef04c9e49d84a3c44acc4e382398dd11&amp;type=3#CardEditorWindow" />
+    <SplitView fixed-pane-initial-dimension="250" fixed-pane-index="1" orientation="Horizontal">
+        <ui:VisualElement name="left-pane">
+            <SplitView orientation="Vertical" fixed-pane-initial-dimension="100" fixed-pane-index="1">
+                <ui:VisualElement name="upper-pane" style="flex-grow: 1;">
+                    <CardEffectGraphView focusable="true" style="flex-grow: 1;">
+                        <ui:Label tabindex="-1" text="Card Effect Tree" display-tooltip-when-elided="true" style="background-color: rgb(37, 37, 37);" />
+                    </CardEffectGraphView>
+                </ui:VisualElement>
+                <ui:VisualElement name="lower-pane">
+                    <ui:Label tabindex="-1" text="Effect Tree Description" display-tooltip-when-elided="true" style="background-color: rgb(37, 37, 37);" />
+                    <ui:Label tabindex="-1" text="Test Description" display-tooltip-when-elided="true" name="Tree-Desc" enable-rich-text="true" style="flex-grow: 1; font-size: 14px; -unity-font: url(&apos;project://database/Assets/TextMesh%20Pro/Fonts/Roboto-Regular.ttf?fileID=12800000&amp;guid=0d39fdc2fef5fae41a1160c3b5c9328a&amp;type=3#Roboto-Regular&apos;); justify-content: center; align-items: center; -unity-text-align: upper-left; white-space: normal;" />
+                </ui:VisualElement>
+            </SplitView>
+        </ui:VisualElement>
+        <ui:VisualElement name="right-pane">
+            <ui:Label tabindex="-1" text="Inspector" display-tooltip-when-elided="true" style="background-color: rgb(37, 37, 37);" />
+            <NodeInspector />
+        </ui:VisualElement>
+    </SplitView>
+</ui:UXML>

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c662145bc9a0c314a8f409c53f96df7c, type: 3}
+  m_Name: BruteDefaultEffectTree
+  m_EditorClassIdentifier: 
+--- !u!114 &4910836851856788492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78dac39cd6c2d344199a6751df266b55, type: 3}
+  m_Name: KeywordNode
+  m_EditorClassIdentifier: 
+  CachedGraphPosition: {x: 492, y: 252.68799}
+  description: Double Strike
+  GUID: 05163b1a-353f-4faa-9267-48912e0fe6ec
+  parent: {fileID: 0}
+  KeywordTree: {fileID: 11400000, guid: 6340f5f6d8d674f4c8b98bb1807bece4, type: 2}

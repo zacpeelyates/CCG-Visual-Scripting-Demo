@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0a99cb662242164e8f42a207c369402, type: 3}
+  m_Name: Double Strike
+  m_EditorClassIdentifier: 
+--- !u!114 &2522541503475596681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d421e29343c77349bcbe4ad66471ec7, type: 3}
+  m_Name: TriggerRootNode
+  m_EditorClassIdentifier: 
+  CachedGraphPosition: {x: 527.4, y: 177.4}
+  description: 'On Your turn, When This DealCombat Damage:'
+  GUID: 4170e873-60f5-44bc-aef7-11e56ff7d3ac
+  parent: {fileID: 0}
+  child: {fileID: 6849182203743109396}
+  MustMeetAllFlags: 0
+  PlayerFlags: 1
+  SourceFlags: 16
+  trigger: 22
+  TriggerOnce: 0
+--- !u!114 &6849182203743109396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce3faab33581e5546b351dba3b5e1415, type: 3}
+  m_Name: DamageNode
+  m_EditorClassIdentifier: 
+  CachedGraphPosition: {x: 549, y: 297}
+  description: 
+  GUID: c1f043a6-0c40-4330-88df-4727ee11fbd9
+  parent: {fileID: 2522541503475596681}
+  args:
+    source:
+      DisplayName: TriggerSource
+      useCallback: 1
+      value: {fileID: 0}
+    amount:
+      DisplayName: TriggerAmount
+      useCallback: 1
+      value: 0
+    targets:
+      DisplayName: TriggerTargets
+      useCallback: 1
+  LegalTargets: 0
+  mustMeetAllFlags: 0
+  numberOfTargets: 1
+  targetCallbackType: 0

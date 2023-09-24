@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-887080673348223094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce3faab33581e5546b351dba3b5e1415, type: 3}
+  m_Name: DamageNode
+  m_EditorClassIdentifier: 
+  CachedGraphPosition: {x: 419.36, y: 270}
+  description: 
+  GUID: 917601d5-40a7-40f6-9b06-95d7417b4d7e
+  parent: {fileID: 3435702719198112708}
+  args:
+    source:
+      DisplayName: TriggerSource
+      useCallback: 0
+      value: {fileID: 0}
+    amount:
+      DisplayName: TriggerAmount
+      useCallback: 0
+      value: 3
+    targets:
+      DisplayName: TriggerTargets
+      useCallback: 0
+  LegalTargets: -1
+  mustMeetAllFlags: 0
+  numberOfTargets: 2
+  targetCallbackType: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c662145bc9a0c314a8f409c53f96df7c, type: 3}
+  m_Name: FireMageDefaultEffectTree
+  m_EditorClassIdentifier: 
+--- !u!114 &3435702719198112708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d421e29343c77349bcbe4ad66471ec7, type: 3}
+  m_Name: TriggerRootNode
+  m_EditorClassIdentifier: 
+  CachedGraphPosition: {x: 410.36, y: 160}
+  description: 'On Either turn, When This Enters:'
+  GUID: 5cd1e6ec-7a3d-449b-ab60-ad142b5fb3e6
+  parent: {fileID: 0}
+  child: {fileID: -887080673348223094}
+  MustMeetAllFlags: 0
+  PlayerFlags: -1
+  SourceFlags: 16
+  trigger: 26
+  TriggerOnce: 0
